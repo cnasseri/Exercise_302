@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add todo</a><br />
+<div th:each="todo : ${todo}">
+    <h4 th:inline="text">[[${todo.id}]] @ [[${todo.taskname}]]</h4>
+    <p th:text="${todo.duedate}"></p>
+</div>
+</body>
+</html>
